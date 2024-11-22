@@ -1,0 +1,24 @@
+[START ONIGIRICODE]
+
+IMPORT os
+
+FUNC main() {
+    PRINT "Sistema Operativo: " + get_os()
+    PRINT "Hostname: " + get_hostname()
+    PRINT "Username: " + get_username()
+    PRINT "Home Directory: " + get_home_dir()
+    
+    # Test variabili d'ambiente
+    set_env("ONIGIRI_TEST", "Hello from OnigiriCode!")
+    PRINT "Variabile d'ambiente: " + get_env("ONIGIRI_TEST")
+    
+    # Test file system
+    write_file("test.txt", "Test file content")
+    PRINT "Contenuto file: " + read_file("test.txt")
+    PRINT "Lista directory: " + list_dir(".")
+    
+    # Pulizia
+    delete_file("test.txt")
+}
+
+[STOP ONIGIRICODE]

@@ -1,0 +1,7 @@
+[package]
+name = "os"
+version = "0.1.0"
+description = "System operations plugin for OnigiriCode"
+author = "OnigiriCode Team"
+
+[dependencies]

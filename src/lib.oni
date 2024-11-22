@@ -1,0 +1,73 @@
+[START ONIGIRICODE]
+
+# Sistema operativo e funzioni di file system per OnigiriCode
+PLUGIN os
+
+# Funzioni del file system
+FUNC read_file(path: String) -> String {
+    NATIVE "os::fs::read_file"
+}
+
+FUNC write_file(path: String, content: String) -> Bool {
+    NATIVE "os::fs::write_file"
+}
+
+FUNC delete_file(path: String) -> Bool {
+    NATIVE "os::fs::delete_file"
+}
+
+FUNC file_exists(path: String) -> Bool {
+    NATIVE "os::fs::file_exists"
+}
+
+FUNC create_dir(path: String) -> Bool {
+    NATIVE "os::fs::create_dir"
+}
+
+FUNC delete_dir(path: String) -> Bool {
+    NATIVE "os::fs::delete_dir"
+}
+
+FUNC list_dir(path: String) -> List {
+    NATIVE "os::fs::list_dir"
+}
+
+# Funzioni di sistema
+FUNC get_env(name: String) -> String {
+    NATIVE "os::env::get_var"
+}
+
+FUNC set_env(name: String, value: String) -> Bool {
+    NATIVE "os::env::set_var"
+}
+
+FUNC get_os() -> String {
+    NATIVE "os::info::get_os"
+}
+
+FUNC get_hostname() -> String {
+    NATIVE "os::info::get_hostname"
+}
+
+FUNC get_username() -> String {
+    NATIVE "os::info::get_username"
+}
+
+FUNC get_home_dir() -> String {
+    NATIVE "os::info::get_home_dir"
+}
+
+# Funzioni di processo
+FUNC execute(command: String) -> String {
+    NATIVE "os::process::execute"
+}
+
+FUNC get_pid() -> Number {
+    NATIVE "os::process::get_pid"
+}
+
+FUNC sleep(ms: Number) -> Void {
+    NATIVE "os::process::sleep"
+}
+
+[STOP ONIGIRICODE]
